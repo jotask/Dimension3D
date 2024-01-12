@@ -130,6 +130,15 @@ namespace dim
 		model = translation_matrix * rotation_matrix * scaling_matrix * origin_matrix;
 	}
 
+	void Object::set_rotation(const Vector3& angles)
+	{
+		rotation_matrix = glm::mat4(1.f);
+		rotation_matrix = glm::rotate(rotation_matrix, glm::radians(angles.x), glm::vec3(1.f, 0.f, 0.f));
+		rotation_matrix = glm::rotate(rotation_matrix, glm::radians(angles.y), glm::vec3(0.f, 1.f, 0.f));
+		rotation_matrix = glm::rotate(rotation_matrix, glm::radians(angles.z), glm::vec3(0.f, 0.f, 1.f));
+		model = translation_matrix * rotation_matrix * scaling_matrix * origin_matrix;
+	}
+
 	void Object::set_position(float x, float y, float z)
 	{
 		set_position(Vector3(x, y, z));

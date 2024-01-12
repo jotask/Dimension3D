@@ -163,6 +163,13 @@ namespace dim
 		void set_rotation(float angle, const Vector3& axis);
 
 		/**
+		 * @brief Change the rotation of the object.
+		 *
+		 * @param angle the new angles of rotation (in degrees)
+		 */
+		void set_rotation(const Vector3& angles)
+
+		/**
 		 * @brief Change the position of the object.
 		 *
 		 * @param x the new X position
