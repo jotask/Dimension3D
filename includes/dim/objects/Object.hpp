@@ -167,7 +167,7 @@ namespace dim
 		 *
 		 * @param angle the new angles of rotation (in degrees)
 		 */
-		void set_rotation(const Vector3& angles)
+		void set_rotation(const Vector3& angles);
 
 		/**
 		 * @brief Change the position of the object.
