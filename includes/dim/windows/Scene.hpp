@@ -283,6 +283,13 @@ namespace dim
 		void add_light(const Light& light);
 
 		/**
+		 * @brief Add a light to the scene.
+		 *
+		 * @param light the light to add
+		 */
+		void add_light(const Light* light);
+
+		/**
 		 * @brief Remove all lights.
 		 */
 		void clear_lights();

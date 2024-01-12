@@ -323,6 +323,11 @@ namespace dim
 		lights.push_back(light.clone());
 	}
 
+	void Scene::add_light(const Light* light)
+	{
+		lights.push_back(light->clone());
+	}
+
 	void Scene::clear_lights()
 	{
 		for (auto& light : lights)
